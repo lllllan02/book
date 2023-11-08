@@ -266,7 +266,8 @@ func (s *S2) f() {}
 var f1 F = S1{}
 var f2 F = &S2{}
 ```
-永远不要使用指向interface的指针，这个是没有意义的.在go语言中，接口本身就是引用类型，换句话说，接口类型本身就是一个指针。对于我的需求，其实test的参数只要是myinterface就可以了，只需要在传值的时候，传*mystruct类型（也只能传*mystruct类型）
+==永远不要使用指向interface的指针，这个是没有意义的.在go语言中，接口本身就是引用类型，换句话说，接口类型本身就是一个指针。== 对于我的需求，其实test的参数只要是myinterface就可以了，只需要在传值的时候，传*mystruct类型（也只能传*mystruct类型）
+
 ```
 type myinterface interface{
 	print()
